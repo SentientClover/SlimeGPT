@@ -27,7 +27,7 @@ async function generateText(prompt, hobby = "enjoying and slurping grass", habit
 
 app.use( express.json() )
 
-app.post("/response", (req, res) => {
+app.post("https://slimegpt.onrender.com/response/response", (req, res) => {
   const { request } = req.body
   let dialogue = generateText(request)
   dialogue.then(function(text) {
