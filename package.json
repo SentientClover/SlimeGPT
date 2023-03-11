@@ -8,10 +8,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "."
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": " Want your slimes to talk?"
-}
+},
+  "engines": {
+    "node": ">=14"
+  }
