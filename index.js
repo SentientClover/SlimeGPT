@@ -29,14 +29,15 @@ app.use( express.json() )
 
 app.post("/response", (req, res) => {
   const { request } = req.body
+  try{
   let dialogue = generateText(request)
   dialogue.then(function(text) {
     res.send({
       response : text
-    }) .catch(function(err) {
-      console.log("ERROR : ",err)
-      next(err);
-    })
+    })} catch(err) {
+      res.status(err.response.status)
+      return res.send(error.message)
+    }
      });
   
 })
