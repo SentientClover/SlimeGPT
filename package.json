@@ -14,7 +14,4 @@
   "author": "",
   "license": "ISC",
   "description": " Want your slimes to talk?"
-},
-  "engines": {
-    "node": ">=14"
-  }
+}
