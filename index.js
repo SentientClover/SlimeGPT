@@ -33,7 +33,9 @@ app.post("/response", (req, res) => {
   dialogue.then(function(text) {
     res.send({
       response : text
-    });
+    }) .catch (err) {
+    next(err);
+  }
      });
   
 })
