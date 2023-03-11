@@ -33,9 +33,10 @@ app.post("/response", (req, res) => {
   dialogue.then(function(text) {
     res.send({
       response : text
-    }) .catch (err) {
-    next(err);
-  }
+    }) .catch(function(err) {
+      console.log("ERROR : ",err)
+      next(err);
+    })
      });
   
 })
